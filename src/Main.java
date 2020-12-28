@@ -21,8 +21,11 @@ public class Main {
                             //System.out.println(line);
                             counter++;
                 }
-                if (counter > 1)
+                if (counter > 1) {
                     System.out.println("ooops");
+                    Thread threadNotification = new Thread(new Notification());
+                    threadNotification.start();
+                }
 
                 reader.close();
 
